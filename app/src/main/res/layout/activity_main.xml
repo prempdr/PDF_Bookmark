@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:id="@+id/main"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:background="@color/colorBackground"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_grey"
+        android:layout_above="@id/bottomBar"/>
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="69dp"
+        app:activeItem="0"
+        app:backgroundColor="@color/bottom_navigation_bg"
+        app:iconSize="24dp"
+        app:iconTint="@color/colorSubText"
+        app:iconTintActive="@color/orange"
+        app:indicatorColor="@color/orange_bg"
+        app:indicatorRadius="24dp"
+        app:itemPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu"
+        app:sideMargins="12dp"
+        app:textColor="@color/orange"
+        app:textSize="14sp"
+        tools:ignore="SpeakableTextPresentCheck" />
+</RelativeLayout>
